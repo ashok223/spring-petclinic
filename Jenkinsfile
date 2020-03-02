@@ -8,11 +8,7 @@ node {
       // mvn package
         sh 'mvn package'
   }
-  stage ('show test results') {
-      // unit testing
-        junit 'target/surefire-reports/*.xml'
-
-  }
+  
      stage ('archival') {
       // archiving artifacts
         archive 'target/*.jar'
